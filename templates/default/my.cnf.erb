@@ -51,6 +51,8 @@ basedir         = <%= node['mysql']['basedir'] %>
 datadir         = <%= node['mysql']['data_dir'] %>
 tmpdir          = <%= node['mysql']['tmpdir'].join(':') %>
 skip-external-locking
+lower_case_table_names = <%= node['mysql']['tunable']['lower-case-table-names'] %>
+
 <%- if node['mysql']['tunable']['skip-name-resolve'] %>
 skip-name-resolve
 <%- end %>

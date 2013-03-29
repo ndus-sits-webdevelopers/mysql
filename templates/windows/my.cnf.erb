@@ -31,6 +31,7 @@ datadir                   = <%= node['mysql']['data_dir'] %>
 character-set-server      = latin1
 default-storage-engine    = INNODB
 sql-mode                  = "STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+lower_case_table_names 	  = <%= node['mysql']['tunable']['lower-case-table-names'] %>
 
 #
 # * Fine Tuning

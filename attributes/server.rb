@@ -252,3 +252,5 @@ unless node['platform_family'] && node['platform_version'].to_i < 6
   default['mysql']['tunable']['table_open_cache'] = "128"
   default['mysql']['tunable']['binlog_format']    = "statement" if node['mysql']['tunable']['log_bin']
 end
+
+default['mysql']['tunable']['lower-case-table-names']               = 1
